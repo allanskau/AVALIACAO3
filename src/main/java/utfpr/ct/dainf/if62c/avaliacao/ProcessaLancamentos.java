@@ -77,8 +77,9 @@ public class ProcessaLancamentos {
     }
 
     private Lancamento getNextLancamento() throws IOException {
-        
-        throw new UnsupportedOperationException("Não implementado");
+        String linha = this.reader.readLine();
+        return  processaLinha(linha);
+        //throw new UnsupportedOperationException("Não implementado");
     }
 
     public List<Lancamento> getLancamentos() throws IOException {
